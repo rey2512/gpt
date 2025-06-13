@@ -74,35 +74,37 @@ const ThreadWelcome: FC = () => {
     <ThreadPrimitive.Empty>
       <div className="flex w-full max-w-[var(--thread-max-width)] flex-grow flex-col">
         <div className="flex w-full flex-grow flex-col items-center justify-center">
-          <p className="mt-4 font-medium">How can I help you today?</p>
+          <p className="mt-4 font-medium text-[#006838] text-lg">Welcome to <span className="font-bold">KIITGPT</span>! How can I assist you today?</p>
         </div>
-        <ThreadWelcomeSuggestions />
       </div>
     </ThreadPrimitive.Empty>
   );
 };
 
+/* Removing the suggestions from the welcome screen as requested
+   Keeping the component definition for potential future use */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ThreadWelcomeSuggestions: FC = () => {
   return (
     <div className="mt-3 flex w-full items-stretch justify-center gap-4">
       <ThreadPrimitive.Suggestion
-        className="hover:bg-muted/80 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border p-3 transition-colors ease-in"
+        className="hover:bg-[#e8f5e9] flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border border-[#4caf50]/30 p-3 transition-colors ease-in"
         prompt="What is the weather in Tokyo?"
         method="replace"
         autoSend
       >
-        <span className="line-clamp-2 text-ellipsis text-sm font-semibold">
+        <span className="line-clamp-2 text-ellipsis text-sm font-semibold text-[#006838]">
           What is the weather in Tokyo?
         </span>
       </ThreadPrimitive.Suggestion>
       <ThreadPrimitive.Suggestion
-        className="hover:bg-muted/80 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border p-3 transition-colors ease-in"
-        prompt="What is assistant-ui?"
+        className="hover:bg-[#e8f5e9] flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border border-[#4caf50]/30 p-3 transition-colors ease-in"
+        prompt="What is KIITGPT?"
         method="replace"
         autoSend
       >
-        <span className="line-clamp-2 text-ellipsis text-sm font-semibold">
-          What is assistant-ui?
+        <span className="line-clamp-2 text-ellipsis text-sm font-semibold text-[#006838]">
+          What is KIITGPT?
         </span>
       </ThreadPrimitive.Suggestion>
     </div>
@@ -131,7 +133,7 @@ const ComposerAction: FC = () => {
           <TooltipIconButton
             tooltip="Send"
             variant="default"
-            className="my-2.5 size-8 p-2 transition-opacity ease-in"
+            className="my-2.5 size-8 p-2 transition-opacity ease-in bg-[#006838] hover:bg-[#4caf50] text-white"
           >
             <SendHorizontalIcon />
           </TooltipIconButton>
@@ -142,7 +144,7 @@ const ComposerAction: FC = () => {
           <TooltipIconButton
             tooltip="Cancel"
             variant="default"
-            className="my-2.5 size-8 p-2 transition-opacity ease-in"
+            className="my-2.5 size-8 p-2 transition-opacity ease-in bg-[#006838] hover:bg-[#4caf50] text-white"
           >
             <CircleStopIcon />
           </TooltipIconButton>

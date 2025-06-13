@@ -7,6 +7,7 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "@/components/app-sidebar";
 import { Separator } from "@/components/ui/separator";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { KiitGptLogo } from "@/components/kiitgpt-logo";
 
 export const Assistant = () => {
   const runtime = useChatRuntime({
@@ -18,20 +19,21 @@ export const Assistant = () => {
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
-          <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+          <header className="flex h-16 shrink-0 items-center gap-2 border-b border-[#e8f5e9] px-4">
             <SidebarTrigger />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
-                    Build Your Own ChatGPT UX
+                  <BreadcrumbLink href="#" className="text-[#006838] flex items-center gap-2">
+                    <KiitGptLogo className="size-5 text-[#006838]" />
+                    KIITGPT
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>
-                    Starter Template
+                  <BreadcrumbPage className="text-[#4caf50]">
+                    AI Assistant
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
